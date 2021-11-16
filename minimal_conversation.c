@@ -12,8 +12,6 @@
 
 static void make_it_minimal(PurpleConversation *conv) {
     PidginConversation *gtkconv;
-    PidginWindow *win;
-
 
     if (!conv) {
         return;
@@ -24,14 +22,8 @@ static void make_it_minimal(PurpleConversation *conv) {
         return;
     }
 
-    win = pidgin_conv_get_window(gtkconv);
-    if (!win || !win->menu.menubar) {
-        return;
-    }
-
     gtk_container_set_border_width(GTK_CONTAINER(gtkconv->tab_cont), 0);
     gtk_widget_hide (gtkconv->infopane);
-    gtk_widget_hide (GTK_WIDGET (win->menu.menubar));
 }
 
 static void
@@ -91,7 +83,7 @@ static PurplePluginInfo info = {
     "Minimal conversation",
     PLUGIN_VERSION,
 
-    "Removes the info-pane and the menu-bar in conversation windows.",
+    "Shrinks the border on conversation windows.",
     "So you can focus on the conversation",
     "budRich",
     "http://github.com/budrich/pidgin-minimal-conversation-plugin",
