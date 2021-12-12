@@ -8,7 +8,7 @@
 #include "gtkplugin.h"
 #include "gtkconv.h"
 
-#define PLUGIN_VERSION "0.1.1"
+#define PLUGIN_VERSION "0.1.2"
 
 static void make_it_minimal(PurpleConversation *conv) {
     PidginConversation *gtkconv;
@@ -18,12 +18,12 @@ static void make_it_minimal(PurpleConversation *conv) {
     }
 
     gtkconv = PIDGIN_CONVERSATION(conv);
-    if (!gtkconv || !gtkconv->infopane) {
-        return;
-    }
+    // if (!gtkconv || !gtkconv->infopane) {
+    //     return;
+    // }
 
     gtk_container_set_border_width(GTK_CONTAINER(gtkconv->tab_cont), 0);
-    gtk_widget_hide (gtkconv->infopane);
+    // gtk_widget_hide (gtkconv->infopane);
 }
 
 static void
