@@ -1,3 +1,7 @@
+# MAINTAINED AT https://git.budlabs.xyz/bud/pidgin-minimal-conversation-plugin/
+
+---
+
 # Pidgin minimal conversation
 
 This plugin hides the extratitle thing and the menu-bar
